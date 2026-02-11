@@ -17,7 +17,7 @@ st.set_page_config(page_title="Raman Classifier (CV Ensemble)", layout="wide")
 # ---------------- Paths (Cloud-safe) ----------------
 APP_DIR = os.path.dirname(os.path.abspath(__file__))
 MODEL_DIR = APP_DIR  # 默认：把 .pth 放在同目录；也可改成 os.path.join(APP_DIR, "models")
-DEFAULT_RAMAN_SHIFT_PATH = os.path.join(APP_DIR, "assets", "Raman_shift.csv")  # 推荐放 repo: assets/Raman_shift.csv
+DEFAULT_RAMAN_SHIFT_PATH = os.path.join(APP_DIR, "Raman_shift.csv")
 
 
 # ================= Utility Functions =================
@@ -413,3 +413,4 @@ if st.button("Start Prediction", type="primary"):
     download_df_button(df_pred_all, "all_predictions.csv", "⬇️ Download Overall Predictions")
 
 st.caption("© Batch Prediction Visualization · Ensemble Averaging · Cloud-safe Raman_shift loading")
+
